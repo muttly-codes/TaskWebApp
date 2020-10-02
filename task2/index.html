@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <title>Task App - task 2</title>
+
+</head>
+
+
+
+<body class="my-container">
+
+    <form class="needs-validation" novalidate>
+        <div class="my-row">
+        <h3 style="text-align: center;">ADD NEW TASK</h3>
+        </div>
+        <div class="form-group row my-row">
+            <label for="task-name" class="col-sm-2 col-form-label"> Task Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="task-name" placeholder="eg. Lay House Foundation" required>
+            </div>
+        </div>
+        <div class="form-group row my-row">
+            <label for="task-description" class="col-sm-2 col-form-label"> Task Details</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="task-description" rows="3" required>eg. Book concreters and bricklayers ...
+                </textarea>
+            </div>
+        </div>
+            <div class="form-group row my-row">
+           
+                <div class="col-sm-2">
+                    <label for="first-name">Assigned To</label>
+                </div>
+            
+            
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="first-name" placeholder="First Name">
+                </div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+                </div>
+            </div>
+
+
+        </div>
+        <div class="form-group row my-row">
+            
+                <div class="col-sm-2">
+                    <label for="due-date" class="col-form-label">Due Date</label>
+                </div>
+                <div class="col-sm-5">
+                    <input type="date" class="form-control" id="due-date" placeholder="Due Date" required>
+                    <div class="invalid-feedback">
+                        Task must have a timeframe
+                    </div>
+                </div>
+               
+            
+            
+                
+
+                <div class="col-sm-5">
+                    <select class="custom-select" id="status">
+                        <option selected>Set Task Status</option>
+                        <option value="1">Preparing</option>
+                        <option value="2">In Progress</option>
+                        <option value="3">In Review</option>
+                        <option value="4">Done</option>
+                    </select>
+                </div>
+                
+            </div>
+
+
+        </div>
+        <div class="row my-row">
+            <button type="submit" class="btn btn-block btn-primary">Add Task</button>
+        </div>
+    </form>
+
+
+    <!-- Optional JavaScript -->
+    <script src="index.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
