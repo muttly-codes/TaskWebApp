@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="myStyleSheet.css">
+    <title>Task App - task 7</title>
+
+</head>
+
+<body>
+
+    <!--NAVIGATION BAR - FIXED TO TOP OF DISPLAY-->
+
+    <section style="max-height: 600px;">
+        <div class="container-fluid bg-dark navStyle">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+            <a class="navbar-brand" href="#">
+                TASK MANAGER
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            my profile
+                        <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">team details</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">settings</a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">search
+                    </button>
+                </form>
+            </div>
+        </nav>
+        </div>
+    </section>
+
+
+    <!-- BUTTON FOR ADDING A NEW TASK-->
+
+    <div class="container-fluid">
+        <!--
+        <div class="row" style="min-height: 70px;"></div>-->
+        <div class="row">
+            <button id="modal-launch-btn" type="button"
+                style="min-height: 55px; border-radius: 5px; margin-left: 40%; margin-right: 40%; z-index: 1500;"
+                class="btn  btn-primary text-center my-button-text fixed-top" data-toggle="modal" data-target="#newTaskModal">
+                <h4>ADD NEW TASK</h4>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- THE MODAL BELOW APPEARS WHEN ABOVE BUTTON IS PRESSED.-->
+    <modal class="my-form-container" style="z-index: 2100;">
+        <div class="modal fade" id="newTaskModal" aria-labelledby="add-new-task-form" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="card; shadow p-3 bg-white rounded" style="margin: 5px; padding: 0 px; border: 2px solid black">
+
+                        <!--THE FORM (BELOW) FOR ENTERING NEW TASK DETAILS IS NESTED WITHIN THE MODAL-->
+                        <form id="newTaskForm" class="needs-validation" novalidate>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="my-row" style="min-height: 40px;">
+                                
+                            </div>
+                            <div class="form-group row my-row">
+                                <label for="taskNameIn" class="col-sm-2 col-form-label"> Task Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="taskNameIn"
+                                    placeholder="eg. Lay House Foundation" required>
+                                </div>
+                            </div>
+                            <div class="form-group row my-row">
+                                <label for="taskDetailsIn" class="col-sm-2 col-form-label"> Task Details</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="taskDetailsIn" rows="3" required placeholder="eg. Book concreters and bricklayers ..." required>
+                                    </textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row my-row">
+
+                                <div class="col-sm-2">
+                                    <label for="assigneeFirst">Assigned To</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="assigneeFirst" placeholder="First Name">
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="text" class="form-control" id="assigneeSecond" placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group row my-row">
+
+                                <div class="col-sm-2">
+                                    <label for="dueDateIn" class="col-form-label">Due Date</label>
+                                </div>
+                                <div class="col-sm-5">
+                                    <input type="date" class="form-control" id="dueDateIn" placeholder="Due Date" required>
+                                    <div class="invalid-feedback">Task must have a timeframe</div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <select class="custom-select" id="statusSelect">
+                                        <option selected>Set Task Status</option>
+                                        <option value="1">Preparing</option>
+                                        <option value="2">In Progress</option>
+                                        <option value="3">In Review</option>
+                                        <option value="4">Done</option>
+                                    </select>
+                                </div>
+                            </div>    
+                            <div class="row my-row">
+                                <button type="submit" class="btn btn-block btn-primary">Add Task</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </modal>
+
+
+    
+    <header class="row container-fluid" style=" margin: 80px 3% 20px 0%; padding-top: 0px;">
+        <h2 class="col-md-12 text-center" style="font-weight: 400; color: black; background-color: rgba(176, 196, 222, 0.0); ">TASK PROGRESS</h2>
+    </header>
+
+
+    <!-- CREATE ROW OF 5 COLUMNS: IN PREPARATION, IN PROGRESS, IN REVIEW, (BLANK), DONE-->
+    
+    <section id="taskCardGrid" >
+      <div class="my-card-grid;">
+        <div class="row container-fluid; my-card-row;">
+
+          <!-- COLUMN LIST OF CARDS START-->
+
+          <!-- 'IN PREPARATION' COLUMN-->
+          <div id="inPreparationCol" class="col-md-3 taskCol" style="background-color: rgba(255, 0, 140, 0.05); border: 1px solid rgba(252, 252, 252, 0.1);">
+           <h4>In Preparation</h4>
+            <ul id="inPreparationList">
+              
+            </ul>
+          </div>
+
+          <!-- 'IN PROGRESS' COLUMN-->
+          <div id="in-progress-col" class="col-md-3 taskCol"; style="background-color: rgba(55, 0, 255, 0.05); border: 1px solid  rgba(252, 252, 252, 0.1);">
+            <h4>In Progress</h4>
+            <ul class="list-group" id="inProgressList" style="list-style-type: none;">
+
+
+            </ul>
+          </div>
+
+          <!-- 'IN REVIEW' COLUMN-->
+          <div id="in-review-col" class="col-md-3 taskCol"; style="background-color: rgba(0, 140, 255, 0.05); border: 1px solid  rgba(252, 252, 252, 0.1));">
+            <h4>In Review</h4>
+              <ul id="inReviewList">
+
+
+              </ul>
+          </div>
+
+          <!-- '... (BLANK)' COLUMN TO SEPARATE ACTIVE AND NON-ACTIVE TASKS-->
+          <div class="col-md-1 taskCol"><h4> ...</h4>
+          </div>
+
+          <!-- 'DONE' COLUMN -->
+          <div id="done-col" class="col-md-2 taskCol"; style="background-color: rgba(0, 255, 191, 0.05); border: 1px solid  rgba(252, 252, 252, 0.1));">
+            <h4>Done</h4>
+              <ul id="doneList">
+
+
+              </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Optional JavaScript -->
+  <script src="JS/TaskManager.js"></script>
+  <script src="JS/index.js"></script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

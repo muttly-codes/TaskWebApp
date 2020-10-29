@@ -1,0 +1,78 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0%;
+    border: 1px solid rgba(255, 255, 255, 0.00);
+    background-color: rgb(6, 32, 5);
+}
+
+#modal-launch-btn {
+    justify-content: center;
+    margin-bottom: 50px; 
+    border: 0px;
+    box-shadow: 5px 8px 12px rgba(12, 12, 12, 0.616), -3px 0px 12px rgba(12, 12, 12, 0.616), inset 2px 2px 2px rgba(245, 245, 245, 0.795), inset -3px -3px 2px rgba(7, 7, 7, 0.575); 
+    min-height: 55px; 
+    border-radius: 40px; 
+    margin-left: 43%; 
+    margin-right: auto; 
+    font-family: Courier, monospace;
+    color: whitesmoke; 
+    font-size: 24px;
+    font-weight: 800;
+    z-index: 1500
+}
+
+.navStyle {
+    min-height: 200px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 20px;
+    font-family: gilbert-color,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    z-index: 1200;
+}
+
+h1 {
+    font-family: gilbert-color,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.5em;
+    margin-top: -150;
+    z-index: 2200;
+    align-items: center;
+}
+
+h3, h5 {
+    font-family: gilbert-color,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: whitesmoke;
+}
+
+.my-button {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+
+}
+
+.my-card-grid {
+    min-height: 60%;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+}
+
+.my-card-row {
+    min-height: 60%
+}
+
+.my-card {
+    background-color: rgba(110, 110, 108, 0.308);
+    font-family: inherit;
+    color: whitesmoke;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.678);
+}
+.card-header, .card-footer {
+    background-color: transparent;
+    color: inherit
+}
